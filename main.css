@@ -3,21 +3,55 @@ body {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
-    background-color: d7b77a;
+    background-color: #d7b77a;
     animation: fadeIn 2s;
 }
+
+.dark-mode {
+    background-image: url("bg_night.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+}
+
+#dark-button {
+    border-radius: 5px;
+    background-color: #3c4748;
+    font-size: 20px;
+    text-align: center;
+    padding-right: 6px;
+    padding-bottom: 6px;
+}
+
+.header {
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 80px;
+}
+
 .title {
     font-size: 40px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     font-family: 'Calibri';
     font-weight: bold;
 }
+
+.titlehighlight {
+    background-color: #d7b77a;
+}
+
+.dark-titlehighlight {
+    background-color: #36344b;
+    color: #dadaf0;
+}
+
 .name {
     font-family: 'Satisfy', cursive;
     -webkit-text-stroke-width: 0px;
     font-size: 45px;
 }
+
 .placeholder {
     padding: 100px;
 }

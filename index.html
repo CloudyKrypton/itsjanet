@@ -12,7 +12,10 @@
         </style>
     </head>
     <body>
-        <div class=title><span style="background-color: #d7b77a">Hi, I'm <span class="name"> Janet</span>.</span></div>
+        <div class="header">
+            <button id="dark-button" onclick="myFunction()">🌙</button>
+        </div>
+        <div class=title><span class=titlehighlight>Hi, I'm <span class="name"> Janet</span>.</span></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
@@ -22,4 +25,18 @@
         <div class="placeholder"></div>
         <div class="placeholder"></div>
     </body>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            var darkButton = document.getElementById("dark-button");
+            darkButton.textContent = darkButton.textContent === "🌙" ? "🌞" : "🌙";
+            isDark = true;
+            darkButton.style.backgroundColor = isDark ? "#3c4748" : "red"
+            isDark = !isDark;
+            var element1 = document.querySelector(".titlehighlight");
+            element1.classList.toggle("dark-titlehighlight");
+        }
+    </script>
 </html>
+
