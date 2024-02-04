@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
+    background-color: d7b77a;
     animation: fadeIn 2s;
 }
 .title {
