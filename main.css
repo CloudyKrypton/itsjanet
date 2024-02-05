@@ -40,6 +40,7 @@ body {
 
 .titlehighlight {
     background-color: #d7b77a;
+    border-radius: 3px;
 }
 
 .dark-titlehighlight {
