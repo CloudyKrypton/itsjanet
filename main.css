@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
+    background-color: #36334a;
 }
 
 #dark-button {
@@ -33,7 +34,7 @@ body {
     font-size: 40px;
     text-align: center;
     padding-top: 80px;
-    font-family: 'Calibri';
+    font-family: 'calibri', sans-serif;
     font-weight: bold;
 }
 
@@ -52,8 +53,75 @@ body {
     font-size: 45px;
 }
 
+.about-me {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 150%;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.pic {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-me-text{
+    background-color: rgba(247, 244, 228,.95);
+    font-family: 'calibri', sans-serif;
+    font-size: large;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 90;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #6e4030;
+}
+
+.dark-about-me-text {
+    background-color: rgba(42,38,70,.95);
+    border-color: #d6d5e8;
+    color: #dadaf0;
+}
+
 .placeholder {
     padding: 100px;
+}
+
+
+/* Phone */
+@media (max-width: 500px) {
+    .header {
+        text-align: right;
+        padding-top: 40px;
+        padding-right: 10%;
+    }
+    .about-me {
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .img-container {
+        width: 80%;
+    }
+    .about-me-text {
+        padding-top: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @keyframes fadeIn {

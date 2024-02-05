@@ -16,7 +16,21 @@
             <button id="dark-button" onclick="myFunction()">🌙</button>
         </div>
         <div class=title><span class=titlehighlight>Hi, I'm <span class="name"> Janet</span>.</span></div>
-        <div class="placeholder"></div>
+        <div class="about-me">
+            <div class="img-container"><img class="pic" src="me_irl.jpeg"></div>
+            <div class="about-me-text"><p>I’m a computer science and philosophy student at the University of Toronto. 
+                The combination of the double major allows my passions to split in two directions: with computers, 
+                to create and innovate, and with philosophy, to write and uncover truths about the world. I was 
+                introduced to computer science in the tenth grade, and I found that I enjoyed the way the logic 
+                flowed through my head. I later found out that computer science was the doorway to creating all 
+                sorts of exciting and cool things, and I was sold.</p>
+                <p>Thus far I have created a few simple games with 
+                Python, Java, and C#, and I’ve developed a few websites both for myself and professionally. I love 
+                mixing in art with what I’m creating, and I design/draw all the sprites for the games I make, and 
+                take great joy in designing the websites I make too. The background of this website was drawn by 
+                me—click the upper right hand button to switch back and forth in dark mode!</p>
+            </div>
+        </div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
@@ -36,6 +50,8 @@
             isDark = !isDark;
             var element1 = document.querySelector(".titlehighlight");
             element1.classList.toggle("dark-titlehighlight");
+            var element2 = document.querySelector(".about-me-text");
+            element2.classList.toggle("dark-about-me-text");
         }
     </script>
 </html>
