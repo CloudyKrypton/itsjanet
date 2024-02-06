@@ -12,9 +12,13 @@
         </style>
     </head>
     <body>
-        <div class="header">
-            <button id="dark-button" onclick="myFunction()">🌙</button>
+        <div class="headercontainer">
+            <div class="header">
+                <div class="tabs"><span>About</span><span>Experiences</span><span>Projects</span></div>
+                <button id="dark-button" onclick="myFunction()">🌙</button>
+            </div>
         </div>
+        </body>
         <div class=title>&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</div>
         <div class="about-me">
             <div class="img-container"><img class="pic" src="me_irl.jpeg"></div>
@@ -37,12 +41,32 @@
                 </div>
             </div>
         </div>
-        <div class="placeholder"></div>
+        <div class="section-header">Experiences</div>
+        <div class="position-listing">
+            <img src="uofticon.webp" class="company-logo">
+            <div class="position-info">
+                <span class="position-date">Sep. 2023 – Present</span>
+                <span class="position-company"> University of Toronto — Work-Study Program</span>
+                <span class="position-title">Full Stack Developer</span>
+                <span class="position-description">Utilized web development tools in a professional environment to build a website for the 
+                    Polish department.</span>
+            </div>
+        </div>
+        <div class="position-listing">
+            <img src="utmist_logo.png" class="company-logo">
+            <div class="position-info">
+                <span class="position-date">Jan. 2023 – April 2023</span>
+                <span class="position-company"> UTMIST</span>
+                <span class="position-title">Graphic Designer</span>
+                <span class="position-description">Designed promotional graphics for the UofT Machine Intelligence Student Team.</span>
+            </div>
+        </div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
     </body>
+
     <script>
         const linkedin = document.getElementById("linkedin");
         const darkButton = document.getElementById("dark-button");
@@ -55,10 +79,21 @@
             element1.classList.toggle("dark-title");
             var element2 = document.querySelector(".about-me-text");
             element2.classList.toggle("dark-about-me-text");
+            var element3 = document.querySelector(".tabs");
+            element3.classList.toggle("dark-tabs");
+            var element4 = document.querySelector(".section-header");
+            element4.classList.toggle("dark-section-header");
+
+            const positionListings = document.querySelectorAll('.position-listing');
+            positionListings[0].classList.toggle("dark-position-listing");
+            positionListings[1].classList.toggle("dark-position-listing");
+            const positionTitles = document.querySelectorAll('.position-title');
+            positionTitles[0].classList.toggle("dark-position-title");
+            positionTitles[1].classList.toggle("dark-position-title");
         }
 
         darkButton.addEventListener("click", function() {
-            if (linkedin.src.endsWith("linkedin.png")) {
+            if (linkedin.src.endsWith("linkedin.png") || linkedin.src.endsWith("linkedin-hover.png")) {
                 linkedin.src = "linkedin-dark.png";
                 linkedin.onmouseover = function() {ldOver()};
                 linkedin.onmouseout = function() {ldOut()};
@@ -67,7 +102,7 @@
                 linkedin.onmouseover = function() {lOver()};
                 linkedin.onmouseout = function() {lOut()};
             }
-            if (github.src.endsWith("github.png")) {
+            if (github.src.endsWith("github.png") || github.src.endsWith("github-hover.png")) {
                 github.src = "github-dark.png";
                 github.onmouseover = function() {gdOver()};
                 github.onmouseout = function() {gdOut()};
