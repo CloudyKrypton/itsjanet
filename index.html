@@ -15,7 +15,7 @@
         <div class="header">
             <button id="dark-button" onclick="myFunction()">🌙</button>
         </div>
-        <div class=title><span class=titlehighlight>&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</span></div>
+        <div class=title>&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</div>
         <div class="about-me">
             <div class="img-container"><img class="pic" src="me_irl.jpeg"></div>
             <div class="about-me-text"><p>I’m a computer science and philosophy student at the University of Toronto. 
@@ -29,6 +29,12 @@
                 mixing in art with what I’m creating, and I design/draw all the sprites for the games I make, and 
                 take great joy in designing the websites I make too. The background of this website was drawn by 
                 me—click the upper right hand button to switch back and forth in dark mode!</p>
+                <div class="contact-buttons">
+                    <a href="https://github.com/CloudyKrypton"><img src="github.png" width="20px" id="github" 
+                        onmouseover="this.src='github-hover.png'" onmouseout="this.src='github.png'"></a>
+                    <a href="https://www.linkedin.com/in/janet-fu07/"><img src="linkedin.png" width="20px" id="linkedin" 
+                        onmouseover="this.src='linkedin-hover.png'" onmouseout="this.src='linkedin.png'"></a>
+                </div>
             </div>
         </div>
         <div class="placeholder"></div>
@@ -38,18 +44,62 @@
         <div class="placeholder"></div>
     </body>
     <script>
+        const linkedin = document.getElementById("linkedin");
+        const darkButton = document.getElementById("dark-button");
+        const github = document.getElementById("github");
         function myFunction() {
             var element = document.body;
             element.classList.toggle("dark-mode");
-            var darkButton = document.getElementById("dark-button");
             darkButton.textContent = darkButton.textContent === "🌙" ? "🌞" : "🌙";
-            isDark = true;
-            darkButton.style.backgroundColor = isDark ? "#3c4748" : "red"
-            isDark = !isDark;
-            var element1 = document.querySelector(".titlehighlight");
-            element1.classList.toggle("dark-titlehighlight");
+            var element1 = document.querySelector(".title");
+            element1.classList.toggle("dark-title");
             var element2 = document.querySelector(".about-me-text");
             element2.classList.toggle("dark-about-me-text");
+        }
+
+        darkButton.addEventListener("click", function() {
+            if (linkedin.src.endsWith("linkedin.png")) {
+                linkedin.src = "linkedin-dark.png";
+                linkedin.onmouseover = function() {ldOver()};
+                linkedin.onmouseout = function() {ldOut()};
+            } else {
+                linkedin.src = "linkedin.png";
+                linkedin.onmouseover = function() {lOver()};
+                linkedin.onmouseout = function() {lOut()};
+            }
+            if (github.src.endsWith("github.png")) {
+                github.src = "github-dark.png";
+                github.onmouseover = function() {gdOver()};
+                github.onmouseout = function() {gdOut()};
+            } else {
+                github.src = "github.png";
+                github.onmouseover = function() {gOver()};
+                github.onmouseout = function() {gOut()};
+            }
+        });
+        function ldOver() {
+            linkedin.src = "linkedin-hover-dark.png";
+        }
+        function ldOut() {
+            linkedin.src = "linkedin-dark.png";
+        }
+        function lOver() {
+            linkedin.src = "linkedin-hover.png";
+        }
+        function lOut() {
+            linkedin.src = "linkedin.png";
+        }
+        function gdOver() {
+            github.src = "github-hover-dark.png";
+        }
+        function gdOut() {
+            github.src = "github-dark.png";
+        }
+        function gOver() {
+            github.src = "github-hover.png";
+        }
+        function gOut() {
+            github.src = "github.png";
         }
     </script>
 </html>
