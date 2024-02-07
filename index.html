@@ -15,7 +15,7 @@
         <div class="headercontainer">
             <div class="header">
                 <div class="tabs"><span>About</span><span>Experiences</span><span>Projects</span></div>
-                <button id="dark-button" onclick="myFunction()">🌙</button>
+                <button id="dark-button" onclick="myFunction()" ><img id="button-image" src="moon.png" width="25px" height="25px"></button>
             </div>
         </div>
         </body>
@@ -70,11 +70,12 @@
     <script>
         const linkedin = document.getElementById("linkedin");
         const darkButton = document.getElementById("dark-button");
+        const buttonImage = document.getElementById("button-image");
         const github = document.getElementById("github");
         function myFunction() {
             var element = document.body;
             element.classList.toggle("dark-mode");
-            darkButton.textContent = darkButton.textContent === "🌙" ? "🌞" : "🌙";
+            // darkButton.textContent = darkButton.textContent === "🌙" ? "🌞" : "🌙";
             var element1 = document.querySelector(".title");
             element1.classList.toggle("dark-title");
             var element2 = document.querySelector(".about-me-text");
@@ -93,6 +94,17 @@
         }
 
         darkButton.addEventListener("click", function() {
+            if (buttonImage.src.endsWith("moon.png")) {
+                buttonImage.src = "sun.png";
+                darkButton.style.backgroundColor = "#36344b";
+                darkButton.style.borderColor = "#d6d5e8";
+                darkButton.style.borderWidth = "3px";
+            } else {
+                buttonImage.src = "moon.png";
+                darkButton.style.backgroundColor = "#dd7d00";
+                darkButton.style.borderColor = "#6e4030";
+                darkButton.style.borderWidth = "5px";
+            }
             if (linkedin.src.endsWith("linkedin.png") || linkedin.src.endsWith("linkedin-hover.png")) {
                 linkedin.src = "linkedin-dark.png";
                 linkedin.onmouseover = function() {ldOver()};
