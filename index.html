@@ -96,11 +96,13 @@
         darkButton.addEventListener("click", function() {
             if (buttonImage.src.endsWith("moon.png")) {
                 buttonImage.src = "sun.png";
+                darkButton.style.paddingTop = "7px";
                 darkButton.style.backgroundColor = "#36344b";
                 darkButton.style.borderColor = "#d6d5e8";
                 darkButton.style.borderWidth = "3px";
             } else {
                 buttonImage.src = "moon.png";
+                darkButton.style.paddingTop = "5px";
                 darkButton.style.backgroundColor = "#dd7d00";
                 darkButton.style.borderColor = "#6e4030";
                 darkButton.style.borderWidth = "5px";
