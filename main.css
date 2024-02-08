@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url("bg.png");
     background-repeat: no-repeat;
@@ -70,6 +74,23 @@ body {
     color: #d6d5e8;
     border-width: 3px;
     padding-top: 9px;
+}
+
+.tablink {
+    text-decoration: none;
+    color: black;
+}
+
+.tablink:hover {
+    color: #6e4030;
+}
+
+.dark-tablink {
+    color: #d6d5e8;
+}
+
+.dark-tablink:hover {
+    color: #8280a4;
 }
 
 .title {

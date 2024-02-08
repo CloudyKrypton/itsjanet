@@ -14,12 +14,14 @@
     <body>
         <div class="headercontainer">
             <div class="header">
-                <div class="tabs"><span>About</span><span>Experiences</span><span>Projects</span></div>
+                <div class="tabs">
+                    <span><a href="#about" class="tablink">About</a></span>
+                    <span><a href="#experiences" class="tablink">Experiences</a></span>
+                    <span>Projects</span></div>
                 <button id="dark-button" onclick="myFunction()" ><img id="button-image" src="moon.png" width="25px" height="25px"></button>
             </div>
         </div>
-        </body>
-        <div class=title>&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</div>
+        <div class=title id="about">&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</div>
         <div class="about-me">
             <div class="img-container"><img class="pic" src="me_irl.jpeg"></div>
             <div class="about-me-text"><p>I’m a computer science and philosophy student at the University of Toronto. 
@@ -41,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-header">Experiences</div>
+        <div class="section-header" id="experiences">Experiences</div>
         <div class="position-listing">
             <img src="uofticon.webp" class="company-logo">
             <div class="position-info">
@@ -84,6 +86,9 @@
             element3.classList.toggle("dark-tabs");
             var element4 = document.querySelector(".section-header");
             element4.classList.toggle("dark-section-header");
+            const tablinks = document.querySelectorAll('.tablink');
+            tablinks[0].classList.toggle("dark-tablink");
+            tablinks[1].classList.toggle("dark-tablink");
 
             const positionListings = document.querySelectorAll('.position-listing');
             positionListings[0].classList.toggle("dark-position-listing");
