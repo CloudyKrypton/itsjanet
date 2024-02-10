@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url("bg.png");
+    background-image: url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -13,7 +13,7 @@ body {
 }
 
 .dark-mode {
-    background-image: url("bg_night.png");
+    background-image: url("images/bg_night.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -32,6 +32,10 @@ body {
     width: 45px;
     height: 45px;
     padding: 5px;
+}
+
+#dark-button:hover {
+    cursor: pointer;
 }
 
 .headercontainer {
@@ -96,7 +100,7 @@ body {
 .title {
     font-size: 40px;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 120px;
     font-family: 'calibri', sans-serif;
     font-weight: bold;
     text-shadow: -1.5px -1.5px 0 #d7b77a, 
@@ -251,7 +255,7 @@ body {
     }
 
     .title {
-        padding-top: 80px;
+        padding-top: 120px;
     }
 
     .about-me {
@@ -297,9 +301,15 @@ body {
 /* Phone */
 @media (max-width: 500px) {
     .header {
-        text-align: right;
-        padding-top: 40px;
-        padding-right: 10%;
+        padding-top: 5%;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 7px;
+    }
+    .title {
+        padding-top: 100px;
     }
     .about-me {
         flex-direction: column;

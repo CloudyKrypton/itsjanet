@@ -18,12 +18,12 @@
                     <span><a href="#about" class="tablink">About</a></span>
                     <span><a href="#experiences" class="tablink">Experiences</a></span>
                     <span>Projects</span></div>
-                <button id="dark-button" onclick="myFunction()" ><img id="button-image" src="moon.png" width="25px" height="25px"></button>
+                <button id="dark-button" onclick="myFunction()" ><img id="button-image" src="images/moon.png" width="25px" height="25px"></button>
             </div>
         </div>
         <div class=title id="about">&nbsp;Hi, I'm <span class="name">Janet</span>.&nbsp;</div>
         <div class="about-me">
-            <div class="img-container"><img class="pic" src="me_irl.jpeg"></div>
+            <div class="img-container"><img class="pic" src="images/me_irl.jpeg"></div>
             <div class="about-me-text"><p>I’m a computer science and philosophy student at the University of Toronto. 
                 The combination of the double major allows my passions to split in two directions: with computers, 
                 to create and innovate, and with philosophy, to write and uncover truths about the world. I was 
@@ -36,16 +36,16 @@
                 take great joy in designing the websites I make too. The background of this website was drawn by 
                 me—click the upper right hand button to switch back and forth in dark mode!</p>
                 <div class="contact-buttons">
-                    <a href="https://github.com/CloudyKrypton"><img src="github.png" width="20px" id="github" 
-                        onmouseover="this.src='github-hover.png'" onmouseout="this.src='github.png'"></a>
-                    <a href="https://www.linkedin.com/in/janet-fu07/"><img src="linkedin.png" width="20px" id="linkedin" 
-                        onmouseover="this.src='linkedin-hover.png'" onmouseout="this.src='linkedin.png'"></a>
+                    <a href="https://github.com/CloudyKrypton"><img src="images/github.png" width="20px" id="github" 
+                        onmouseover="this.src='images/github-hover.png'" onmouseout="this.src='images/github.png'"></a>
+                    <a href="https://www.linkedin.com/in/janet-fu07/"><img src="images/linkedin.png" width="20px" id="linkedin" 
+                        onmouseover="this.src='images/linkedin-hover.png'" onmouseout="this.src='images/linkedin.png'"></a>
                 </div>
             </div>
         </div>
         <div class="section-header" id="experiences">Experiences</div>
         <div class="position-listing">
-            <img src="uofticon.webp" class="company-logo">
+            <img src="images/uofticon.webp" class="company-logo">
             <div class="position-info">
                 <span class="position-date">Sep. 2023 – Present</span>
                 <span class="position-company"> University of Toronto — Work-Study Program</span>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="position-listing">
-            <img src="utmist_logo.png" class="company-logo">
+            <img src="images/utmist_logo.png" class="company-logo">
             <div class="position-info">
                 <span class="position-date">Jan. 2023 – April 2023</span>
                 <span class="position-company"> UTMIST</span>
@@ -63,98 +63,11 @@
                 <span class="position-description">Designed promotional graphics for the UofT Machine Intelligence Student Team.</span>
             </div>
         </div>
+        <div class="section-header" id="projects">Projects</div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <script src="script.js"></script>
     </body>
-
-    <script>
-        const linkedin = document.getElementById("linkedin");
-        const darkButton = document.getElementById("dark-button");
-        const buttonImage = document.getElementById("button-image");
-        const github = document.getElementById("github");
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-            // darkButton.textContent = darkButton.textContent === "🌙" ? "🌞" : "🌙";
-            var element1 = document.querySelector(".title");
-            element1.classList.toggle("dark-title");
-            var element2 = document.querySelector(".about-me-text");
-            element2.classList.toggle("dark-about-me-text");
-            var element3 = document.querySelector(".tabs");
-            element3.classList.toggle("dark-tabs");
-            var element4 = document.querySelector(".section-header");
-            element4.classList.toggle("dark-section-header");
-            const tablinks = document.querySelectorAll('.tablink');
-            tablinks[0].classList.toggle("dark-tablink");
-            tablinks[1].classList.toggle("dark-tablink");
-
-            const positionListings = document.querySelectorAll('.position-listing');
-            positionListings[0].classList.toggle("dark-position-listing");
-            positionListings[1].classList.toggle("dark-position-listing");
-            const positionTitles = document.querySelectorAll('.position-title');
-            positionTitles[0].classList.toggle("dark-position-title");
-            positionTitles[1].classList.toggle("dark-position-title");
-        }
-
-        darkButton.addEventListener("click", function() {
-            if (buttonImage.src.endsWith("moon.png")) {
-                buttonImage.src = "sun.png";
-                darkButton.style.paddingTop = "7px";
-                darkButton.style.backgroundColor = "#36344b";
-                darkButton.style.borderColor = "#d6d5e8";
-                darkButton.style.borderWidth = "3px";
-            } else {
-                buttonImage.src = "moon.png";
-                darkButton.style.paddingTop = "5px";
-                darkButton.style.backgroundColor = "#dd7d00";
-                darkButton.style.borderColor = "#6e4030";
-                darkButton.style.borderWidth = "5px";
-            }
-            if (linkedin.src.endsWith("linkedin.png") || linkedin.src.endsWith("linkedin-hover.png")) {
-                linkedin.src = "linkedin-dark.png";
-                linkedin.onmouseover = function() {ldOver()};
-                linkedin.onmouseout = function() {ldOut()};
-            } else {
-                linkedin.src = "linkedin.png";
-                linkedin.onmouseover = function() {lOver()};
-                linkedin.onmouseout = function() {lOut()};
-            }
-            if (github.src.endsWith("github.png") || github.src.endsWith("github-hover.png")) {
-                github.src = "github-dark.png";
-                github.onmouseover = function() {gdOver()};
-                github.onmouseout = function() {gdOut()};
-            } else {
-                github.src = "github.png";
-                github.onmouseover = function() {gOver()};
-                github.onmouseout = function() {gOut()};
-            }
-        });
-        function ldOver() {
-            linkedin.src = "linkedin-hover-dark.png";
-        }
-        function ldOut() {
-            linkedin.src = "linkedin-dark.png";
-        }
-        function lOver() {
-            linkedin.src = "linkedin-hover.png";
-        }
-        function lOut() {
-            linkedin.src = "linkedin.png";
-        }
-        function gdOver() {
-            github.src = "github-hover-dark.png";
-        }
-        function gdOut() {
-            github.src = "github-dark.png";
-        }
-        function gOver() {
-            github.src = "github-hover.png";
-        }
-        function gOut() {
-            github.src = "github.png";
-        }
-    </script>
 </html>
 
