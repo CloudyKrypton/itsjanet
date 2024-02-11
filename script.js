@@ -17,6 +17,7 @@ function myFunction() {
     const tablinks = document.querySelectorAll('.tablink');
     tablinks[0].classList.toggle("dark-tablink");
     tablinks[1].classList.toggle("dark-tablink");
+    tablinks[2].classList.toggle("dark-tablink");
 
     const sectionHeaders = document.querySelectorAll(".section-header");
     sectionHeaders[0].classList.toggle("dark-section-header");
