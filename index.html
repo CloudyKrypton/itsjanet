@@ -17,7 +17,7 @@
                 <div class="tabs">
                     <span><a href="#about" class="tablink">About</a></span>
                     <span><a href="#experiences" class="tablink">Experiences</a></span>
-                    <span>Projects</span></div>
+                    <span><a href="#projects" class="tablink">Projects</a></span></div>
                 <button id="dark-button" onclick="myFunction()" ><img id="button-image" src="images/moon.png" width="25px" height="25px"></button>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 take great joy in designing the websites I make too. The background of this website was drawn by 
                 me—click the upper right hand button to switch back and forth in dark mode!</p>
                 <div class="contact-buttons">
-                    <a href="https://github.com/CloudyKrypton"><img src="images/github.png" width="20px" id="github" 
+                    <a href="https://github.com/CloudyKrypton"><img src="images/github.png" width="20px" class="github" 
                         onmouseover="this.src='images/github-hover.png'" onmouseout="this.src='images/github.png'"></a>
                     <a href="https://www.linkedin.com/in/janet-fu07/"><img src="images/linkedin.png" width="20px" id="linkedin" 
                         onmouseover="this.src='images/linkedin-hover.png'" onmouseout="this.src='images/linkedin.png'"></a>
@@ -64,9 +64,37 @@
             </div>
         </div>
         <div class="section-header" id="projects">Projects</div>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="images/smart-sudoku.png" class="project-img">
+                <div class="project-text">
+                    <div class="project-title">Smart Sudoku</div>
+                    <div class="project-description">Sudoku that switches values every
+                        time the user enters a number. Algorithm developed in Java,
+                        using Java Swing API for the GUI and MongoDB. 
+                    </div>
+                    <div class="link-buttons">
+                        <a href="https://github.com/mariimao/SmartSudoku"><img src="images/github.png" width="20px" class="github" 
+                            onmouseover="this.src='images/github-hover.png'" onmouseout="this.src='images/github.png'"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cats-cradle.png" class="project-img">
+                <div class="project-text">
+                    <div class="project-title">Cat's Cradle</div>
+                    <div class="project-description">A discord game bot that allows you to 
+                        collect cats in a choose-your-own-adventure gameplay. 
+                        Written in python and discord.py.</div>
+                    <div class="link-buttons">
+                        <a href="https://github.com/CloudyKrypton/cats-cradle"><img src="images/github.png" width="20px" class="github" 
+                            onmouseover="this.src='images/github-hover.png'" onmouseout="this.src='images/github.png'"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <div class="credit">© 2024 made by Janet Fu :3</div>
         <script src="script.js"></script>
     </body>
 </html>
