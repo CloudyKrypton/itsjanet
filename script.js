@@ -31,6 +31,7 @@ function myFunction() {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards[0].classList.toggle("dark-project-card");
     projectCards[1].classList.toggle("dark-project-card");
+    projectCards[2].classList.toggle("dark-project-card");
 }
 
 darkButton.addEventListener("click", function() {
@@ -69,6 +70,9 @@ darkButton.addEventListener("click", function() {
             } else if (i == 2) {
                 githubs[2].onmouseover = function() {gdOver2()};
                 githubs[2].onmouseout = function() {gdOut2()};
+            } else if (i == 3) {
+                githubs[3].onmouseover = function() {gdOver3()};
+                githubs[3].onmouseout = function() {gdOut3()};
             }
         } else {
             githubs[i].src = "images/github.png";
@@ -81,6 +85,9 @@ darkButton.addEventListener("click", function() {
             } else if (i == 2) {
                 githubs[2].onmouseover = function() {gOver2()};
                 githubs[2].onmouseout = function() {gOut2()};
+            } else if (i == 3) {
+                githubs[3].onmouseover = function() {gOver3()};
+                githubs[3].onmouseout = function() {gOut3()};
             }
         }
     }
@@ -132,4 +139,16 @@ function gOver2() {
 }
 function gOut2() {
     githubs[2].src = "images/github.png";
+}
+function gdOver3() {
+    githubs[3].src = "images/github-hover-dark.png";
+}
+function gdOut3() {
+    githubs[3].src = "images/github-dark.png";
+}
+function gOver3() {
+    githubs[3].src = "images/github-hover.png";
+}
+function gOut3() {
+    githubs[3].src = "images/github.png";
 }
