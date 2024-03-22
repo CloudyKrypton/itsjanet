@@ -374,6 +374,19 @@ body {
     }
 }
 
+/* Project container specific */
+@media (max-width: 735px) {
+    .projects-container {
+        display: grid;
+        grid-template-rows: repeat(3, 380px);
+        grid-template-columns: repeat(1, 300px);
+        row-gap: 12vw;
+        padding-left: 5%;
+        padding-top: 40px;
+        border-radius: 12px 12px 0px 0px;
+    }
+}
+
 /* Phone */
 @media (max-width: 540px) {
     .header {
@@ -406,15 +419,6 @@ body {
         padding-top: 30px;
         padding-left: 10%;
         padding-right: 10%;
-    }
-    .projects-container {
-        display: grid;
-        grid-template-rows: repeat(3, 380px);
-        grid-template-columns: repeat(1, 300px);
-        row-gap: 12vw;
-        padding-left: 5%;
-        padding-top: 40px;
-        border-radius: 12px 12px 0px 0px;
     }
 }
 
