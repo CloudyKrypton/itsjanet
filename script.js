@@ -28,10 +28,10 @@ function myFunction() {
     const positionTitles = document.querySelectorAll('.position-title');
     positionTitles[0].classList.toggle("dark-position-title");
     positionTitles[1].classList.toggle("dark-position-title");
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards[0].classList.toggle("dark-project-card");
-    projectCards[1].classList.toggle("dark-project-card");
-    projectCards[2].classList.toggle("dark-project-card");
+    const projectCards = document.querySelectorAll('.project-card-inner');
+    projectCards[0].classList.toggle("dark-project-card-inner");
+    projectCards[1].classList.toggle("dark-project-card-inner");
+    projectCards[2].classList.toggle("dark-project-card-inner");
 }
 
 darkButton.addEventListener("click", function() {

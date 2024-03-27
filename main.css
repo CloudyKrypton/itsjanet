@@ -237,6 +237,16 @@ body {
 }
 
 .project-card {
+    width: 300px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.project-card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -248,12 +258,44 @@ body {
     border-width: 3px;
     border-color: #6e4030;
     border-style: dashed;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.dark-project-card {
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.project-card-back {
+    transform: rotateY(180deg);
+}
+
+.dark-project-card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    border-radius: 10px;
     background-color: rgba(42,38,70);
     border-color: #d6d5e8;
     color: #dadaf0;
+    width: 300px;
+    height: 380px;
+    padding: 10px;
+    border-width: 3px;
+}
+
+.project-card:hover .dark-project-card-inner {
+    transform: rotateY(180deg);
 }
 
 .project-img {
