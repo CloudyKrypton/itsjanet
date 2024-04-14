@@ -4,7 +4,8 @@ This is my portfolio website. I built it using HTML/CSS/JavaScript, though in th
 Link: https://itsja.net/
 
 ### TODO
+- Make a dynamic background based on screen length
 - Add art section
 - Add animation
-- Update about me + projects
+- Update about me + projects + experience
 - Overlay drawings/doodles onto the portfolio picture
