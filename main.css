@@ -3,20 +3,34 @@ html {
 }
 
 body {
-    background-image: url("images/bg.png");
+    background-image: url("images/bg_bottom.png");
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
+    background-position: center bottom;
+    background-size: 100vw, auto;
     background-color: #d7b77a;
     /* animation: fadeIn 2s; */
     margin: 0;
 }
 
+#bg-top {
+    width: 100%;
+    z-index: -10;
+    position: absolute;
+}
+
+#bg-bottom {
+    width: 100%;
+    z-index: -10;
+    /* position: absolute; */
+    position: fixed;
+    bottom: 0
+}
+
 .dark-mode {
-    background-image: url("images/bg_night.png");
+    background-image: url("images/bg_night_bottom.png");
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
+    background-position: center bottom;
+    background-size: 100vw, auto;
     background-color: #36334a;
 }
 

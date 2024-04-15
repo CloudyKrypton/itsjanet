@@ -2,7 +2,9 @@ const linkedin = document.getElementById("linkedin");
 const link = document.getElementById("link");
 const darkButton = document.getElementById("dark-button");
 const buttonImage = document.getElementById("button-image");
+const bgTop = document.getElementById("bg-top");
 const githubs = document.getElementsByClassName("github");
+
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -36,6 +38,11 @@ function myFunction() {
 }
 
 darkButton.addEventListener("click", function() {
+    if (bgTop.src.endsWith("images/bg_top.png")) {
+        bgTop.src = "images/bg_night_top.png";
+    } else {
+        bgTop.src = "images/bg_top.png";
+    }
     if (buttonImage.src.endsWith("images/moon.png")) {
         buttonImage.src = "images/sun.png";
         darkButton.style.paddingTop = "7px";
