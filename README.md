@@ -7,4 +7,5 @@ Link: https://itsja.net/
 - Add art section
 - Add animation
 - Update about me + projects + experience
+- Update mobile click card
 - Overlay drawings/doodles onto the portfolio picture
