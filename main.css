@@ -328,6 +328,10 @@ body {
     transform: rotateY(180deg);
 }
 
+.project-card:active .dark-project-card-inner {
+    transform: rotateY(180deg);
+}
+
 .project-img {
     max-width: 100%;
     width: 300px;
