@@ -23,18 +23,21 @@ function myFunction() {
     tablinks[2].classList.toggle("dark-tablink");
 
     const sectionHeaders = document.querySelectorAll(".section-header");
-    sectionHeaders[0].classList.toggle("dark-section-header");
-    sectionHeaders[1].classList.toggle("dark-section-header");
+    for (var i = 0; i < 2; i++) {
+        sectionHeaders[i].classList.toggle("dark-section-header");
+    }
     const positionListings = document.querySelectorAll('.position-listing');
-    positionListings[0].classList.toggle("dark-position-listing");
-    positionListings[1].classList.toggle("dark-position-listing");
+    for (var i = 0; i < 3; i++) {
+        positionListings[i].classList.toggle("dark-position-listing");
+    }
     const positionTitles = document.querySelectorAll('.position-title');
-    positionTitles[0].classList.toggle("dark-position-title");
-    positionTitles[1].classList.toggle("dark-position-title");
+    for (var i = 0; i < 3; i++) {
+        positionTitles[i].classList.toggle("dark-position-title");
+    }
     const projectCards = document.querySelectorAll('.project-card-inner');
-    projectCards[0].classList.toggle("dark-project-card-inner");
-    projectCards[1].classList.toggle("dark-project-card-inner");
-    projectCards[2].classList.toggle("dark-project-card-inner");
+    for (var i = 0; i < 3; i++) {
+        projectCards[i].classList.toggle("dark-project-card-inner");
+    }
 }
 
 darkButton.addEventListener("click", function() {
