@@ -2,6 +2,7 @@ const linkedin = document.getElementById("linkedin");
 const link = document.getElementById("link");
 const darkButton = document.getElementById("dark-button");
 const buttonImage = document.getElementById("button-image");
+const pic = document.getElementById("pic")
 const bgTop = document.getElementById("bg-top");
 const githubs = document.getElementsByClassName("github");
 
@@ -58,6 +59,11 @@ darkButton.addEventListener("click", function() {
         darkButton.style.backgroundColor = "#dd7d00";
         darkButton.style.borderColor = "#6e4030";
         darkButton.style.borderWidth = "5px";
+    }
+    if (pic.src.endsWith("images/medark.webp")) {
+        pic.src = "images/meirl.webp";
+    } else {
+        pic.src = "images/medark.webp";
     }
     if (linkedin.src.endsWith("images/linkedin.png") || linkedin.src.endsWith("images/linkedin-hover.png")) {
         linkedin.src = "images/linkedin-dark.png";

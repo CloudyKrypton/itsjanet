@@ -206,11 +206,26 @@ body {
         1.5px 1.5px 0 #36344b;
 }
 
+.pos-outer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.positions {
+    width: 60%;
+    /* border: 0px;
+    border-left: 1px;
+    border-color: black;
+    border-style: solid; */
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
 .position-listing {
     display: flex;
     padding-top: 30px;
-    padding-left: 20%;
-    padding-right: 20%;
     font-family: 'calibri', sans-serif;
     gap: 30px;
 }
@@ -221,6 +236,9 @@ body {
 
 .company-logo {
     border-radius: 6px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
     width: 60px;
     height: 60px;
 }
