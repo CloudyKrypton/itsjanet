@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url("images/bg_bottom.png");
+    /* background-image: url("images/bg_bottom.png"); */
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100vw, auto;
@@ -192,10 +192,18 @@ body {
     font-family: 'calibri', sans-serif;
     font-size: 30px;
     font-weight: bold;
+    text-shadow: -1.5px -1.5px 0 #d7b77a, 
+        1.5px -1.5px 0 #d7b77a, 
+        -1.5px 1.5px 0 #d7b77a, 
+        1.5px 1.5px 0 #d7b77a;
 }
 
 .dark-section-header {
     color: #dadaf0;
+    text-shadow: -1.5px -1.5px 0 #36344b, 
+        1.5px -1.5px 0 #36344b, 
+        -1.5px 1.5px 0 #36344b, 
+        1.5px 1.5px 0 #36344b;
 }
 
 .position-listing {
@@ -415,6 +423,10 @@ body {
 
 /* Laptop */
 @media (max-width: 1500px) {
+    body {
+        background-image: url("images/bg_bottom.png");
+    }
+
     #dark-button {
         border-radius: 5px;
         font-size: 20px;

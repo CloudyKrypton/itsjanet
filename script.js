@@ -27,11 +27,11 @@ function myFunction() {
         sectionHeaders[i].classList.toggle("dark-section-header");
     }
     const positionListings = document.querySelectorAll('.position-listing');
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 4; i++) {
         positionListings[i].classList.toggle("dark-position-listing");
     }
     const positionTitles = document.querySelectorAll('.position-title');
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 4; i++) {
         positionTitles[i].classList.toggle("dark-position-title");
     }
     const projectCards = document.querySelectorAll('.project-card-inner');
