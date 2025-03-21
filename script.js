@@ -1,4 +1,5 @@
 const linkedin = document.getElementById("linkedin");
+const rizzume = document.getElementById("rizzume");
 const link = document.getElementById("link");
 const darkButton = document.getElementById("dark-button");
 const buttonImage = document.getElementById("button-image");
@@ -36,7 +37,7 @@ function myFunction() {
         positionTitles[i].classList.toggle("dark-position-title");
     }
     const projectCards = document.querySelectorAll('.project-card-inner');
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 4; i++) {
         projectCards[i].classList.toggle("dark-project-card-inner");
     }
 }
@@ -74,6 +75,15 @@ darkButton.addEventListener("click", function() {
         linkedin.onmouseover = function() {lOver()};
         linkedin.onmouseout = function() {lOut()};
     }
+    if (rizzume.src.endsWith("images/rizzume.png") || rizzume.src.endsWith("images/rizzume-hover.png")) {
+        rizzume.src = "images/rizzume-dark.png";
+        rizzume.onmouseover = function() {rdOver()};
+        rizzume.onmouseout = function() {rdOut()};
+    } else {
+        rizzume.src = "images/rizzume.png";
+        rizzume.onmouseover = function() {rOver()};
+        rizzume.onmouseout = function() {rOut()};
+    }
     if (link.src.endsWith("images/link.png") || link.src.endsWith("images/link-hover.png")) {
         link.src = "images/link-dark.png";
         link.onmouseover = function() {lkOver()};
@@ -108,6 +118,9 @@ darkButton.addEventListener("click", function() {
             } else if (i == 6) {
                 githubs[6].onmouseover = function() {gdOver6()};
                 githubs[6].onmouseout = function() {gdOut6()};
+            } else if (i == 7) {
+                githubs[7].onmouseover = function() {gdOver7()};
+                githubs[7].onmouseout = function() {gdOut7()};
             }
         } else {
             githubs[i].src = "images/github.png";
@@ -132,6 +145,9 @@ darkButton.addEventListener("click", function() {
             } else if (i == 6) {
                 githubs[6].onmouseover = function() {gOver6()};
                 githubs[6].onmouseout = function() {gOut6()};
+            }  else if (i == 7) {
+                githubs[7].onmouseover = function() {gOver7()};
+                githubs[7].onmouseout = function() {gOut7()};
             }
         }
     }
@@ -147,6 +163,18 @@ function lOver() {
 }
 function lOut() {
     linkedin.src = "images/linkedin.png";
+}
+function rdOver() {
+    rizzume.src = "images/rizzume-hover-dark.png";
+}
+function rdOut() {
+    rizzume.src = "images/rizzume-dark.png";
+}
+function rOver() {
+    rizzume.src = "images/rizzume-hover.png";
+}
+function rOut() {
+    rizzume.src = "images/rizzume.png";
 }
 function lkOver() {
     link.src = "images/link-hover-dark.png";
@@ -243,4 +271,16 @@ function gOver6() {
 }
 function gOut6() {
     githubs[6].src = "images/github.png";
+}
+function gdOver7() {
+    githubs[7].src = "images/github-hover-dark.png";
+}
+function gdOut7() {
+    githubs[7].src = "images/github-dark.png";
+}
+function gOver7() {
+    githubs[7].src = "images/github-hover.png";
+}
+function gOut7() {
+    githubs[7].src = "images/github.png";
 }
