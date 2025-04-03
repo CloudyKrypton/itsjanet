@@ -5,6 +5,7 @@ Link: https://itsja.net/
 
 ### TODO
 - Fix the project card grids
+- Add video demos for each project
 - Generally update for a slicker UI
 - Add art section
 - Add animation
