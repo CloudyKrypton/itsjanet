@@ -19,25 +19,33 @@ function myFunction() {
     element3.classList.toggle("dark-tabs");
     var element4 = document.querySelector(".credit");
     element4.classList.toggle("dark-credit");
+    var element5 = document.querySelector(".positions");
+    element5.classList.toggle("dark-positions");
+    var element6 = document.querySelector(".pos-inner");
+    element6.classList.toggle("dark-pos-inner");
     const tablinks = document.querySelectorAll('.tablink');
     tablinks[0].classList.toggle("dark-tablink");
     tablinks[1].classList.toggle("dark-tablink");
     tablinks[2].classList.toggle("dark-tablink");
 
+    const dots = document.querySelectorAll(".dot");
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.toggle("dark-dot");
+    }
     const sectionHeaders = document.querySelectorAll(".section-header");
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < sectionHeaders.length; i++) {
         sectionHeaders[i].classList.toggle("dark-section-header");
     }
     const positionListings = document.querySelectorAll('.position-listing');
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < positionListings.length; i++) {
         positionListings[i].classList.toggle("dark-position-listing");
     }
     const positionTitles = document.querySelectorAll('.position-title');
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < positionTitles.length; i++) {
         positionTitles[i].classList.toggle("dark-position-title");
     }
     const projectCards = document.querySelectorAll('.project-card-inner');
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < projectCards.length; i++) {
         projectCards[i].classList.toggle("dark-project-card-inner");
     }
 }
