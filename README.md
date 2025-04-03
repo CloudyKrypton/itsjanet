@@ -4,8 +4,9 @@ This is my portfolio website. I built it using HTML/CSS/JavaScript, though in th
 Link: https://itsja.net/
 
 ### TODO
+- Fix the project card grids
+- Generally update for a slicker UI
 - Add art section
 - Add animation
-- Update about me + projects + experience
 - Update mobile click for cards
-- Overlay drawings/doodles onto the portfolio picture
+- Update portfolio picture
